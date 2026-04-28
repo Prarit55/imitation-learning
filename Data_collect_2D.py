@@ -46,6 +46,7 @@ while True:
         screen = cv2.resize(screen, (400, 400))
         cv2.imshow('screen', screen)
         screen = cv2.resize(screen, (100, 100))
+        
 
         # FPS
         curr_time = time.time()

@@ -33,7 +33,7 @@ for data in train_data:
     control = data[1]
 
     # Data cleaning
-    if control[1] == 0.0 or control[1] == 0.5:
+    if control[1] > 0.2:
         forward += 1
         images.append(new_image)
         controls.append(control)
