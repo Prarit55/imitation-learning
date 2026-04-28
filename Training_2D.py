@@ -11,7 +11,7 @@ from sklearn.utils import shuffle
 
 import cv2
 
-train_data = np.load('data/tf_data1.npy', allow_pickle=True)
+train_data = np.load('data/tf_data.npy', allow_pickle=True)
 
 noise = 0.05
 images = []
