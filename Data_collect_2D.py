@@ -38,7 +38,6 @@ controller = pygame.joystick.Joystick(1)
 controller.init()
 name = controller.get_name()
 print("Controller Name: ", name)
-
 while True:
     if not pause:
         # Screen recording data

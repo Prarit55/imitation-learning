@@ -1,7 +1,7 @@
 import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Flatten, Lambda, Cropping2D, MaxPooling2D, Conv2D, Activation, Dropout
-from tensorflow.keras.applications.vgg16 import VGG16
+from tensorflow.keras.applications.vgg19 import VGG19
 from tensorflow.keras.layers import Input
 from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
@@ -70,7 +70,7 @@ print("the image is being trained on {} samples".format(len(X_train)))
 epochs = 10
 batch_size = 128
 
-vgg_model = VGG16(weights='imagenet', include_top=False, input_shape=(66, 200, 3))  # pretrained vgg16 model with last layer chopped off.
+vgg_model = VGG19(weights='imagenet', include_top=False, input_shape=(66, 200, 3))  # pretrained vgg19 model with last layer chopped off.
 for layer in vgg_model.layers:
     layer.trainable = False
 
